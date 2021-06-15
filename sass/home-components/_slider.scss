@@ -1,0 +1,237 @@
+.slider { 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 0;
+
+  @media only screen and (max-width:$phone){
+    padding: 4rem 0;
+  }
+
+  &__container {  
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1150px;
+    font-size: 8rem;
+    box-shadow: $shadow;
+    border-radius: $bor-rad-sm;
+
+    @media only screen and (max-width:$big){
+      width: 900px;
+    }
+
+    @media only screen and (max-width:$middle){
+      width: 500px;
+    }
+
+    @media only screen and (max-width:$phone){
+      width: 280px;
+      height: 59.5rem;
+    }
+  }
+  
+  &__slide {  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    @media only screen and (max-width:$big){
+      
+    }
+
+    @media only screen and (max-width:$middle){
+      
+    }
+
+    @media only screen and (max-width:$phone){
+      align-items: flex-start;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    z-index: 99;
+    transform: translateY(-50%) scale(1);
+    color: $color-white;
+    text-shadow: 3px 3px 2px $color-black;
+    cursor: pointer;
+    transition: $transition-1;
+
+    @media only screen and (max-width:$phone){
+      align-items: flex-start;
+    }
+
+    &:hover{
+      filter:  brightness(125%);
+      transform: translateY(-50%) scale(1.2);
+    }
+  }
+
+  &__card { 
+    display: flex;
+    width: 100%;
+
+    @media only screen and (max-width:$big){
+    }
+    
+    @media only screen and (max-width:$middle){
+      
+      flex-wrap: wrap;
+    }
+
+    @media only screen and (max-width:$phone){
+      flex-direction: column;
+      width: 280px;
+    }
+  }
+  
+  &__card-img {
+    height:400px;
+    width:400px;
+    text-align:center;
+    font-size: 3rem;
+
+    @media only screen and (max-width:$big){
+      height:275px;
+      width:275px;
+    }
+
+    @media only screen and (max-width:$middle){
+      height:250px;
+      width:250px;
+    }
+
+    @media only screen and (max-width:$phone){
+      width:100%;
+      height: inherit;
+    }
+  }
+
+  &__img {
+    width:100%;
+  }
+  
+  &__card-text-box {
+    background-image: $rwb-gradient;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+
+    @media only screen and (max-width:$middle){
+      flex: inherit;
+      width: 500px;
+      height: 229px;
+    }
+    
+    @media only screen and (max-width:$phone){
+      flex: inherit;
+      width: 280px;
+      height: 195px;
+    }
+  }
+  
+  &__card-heading {
+    background-color:$brighten-1;
+    margin: 0;  
+    width:100%;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 2.2rem;
+  }
+  
+  &__card-stars-box {
+     
+    padding: 10px 0;
+    display:flex;
+  }
+  
+  &__card-icon {
+    height:25px;
+    width:25px;
+    fill: $color-prim-dark;
+
+    @media only screen and (max-width:$phone){
+      width: 15px;
+      height: 15px;
+    }
+    
+    &:not(:last-child){
+      margin-right:3px;
+    }
+  }
+  
+  &__link {
+    border:3px solid $color-prim-dark;
+    margin-bottom:20px;
+    padding:1rem 2rem;
+    font-size: 3rem;
+    border-radius: $bor-rad-sm;
+    transition: $transition-1;
+    color: $link-color-dark;
+
+    @media only screen and (max-width:$phone){
+      padding: 1rem;
+    }
+
+    &:hover {
+      background-color: $color-prim-dark;
+      color: $text-color-light;
+    }
+
+    &:active {
+      background-color: $color-prim-light;
+      color: $link-color-dark;
+    }
+  }
+  
+}
+
+#home-slider__arrow--left{
+  top: 42%;
+  left: 22rem;
+
+  @media only screen and (max-width:$big){
+    left: 1rem;
+    transform: scale(1.2);
+  }
+
+  @media only screen and (max-width:$middle){
+    left: 1rem;
+    transform: scale(.8);
+  }
+
+  @media only screen and (max-width:$phone){
+    left: 1rem;
+    transform: scale(.8);
+  }
+}
+
+#home-slider__arrow--right{
+  top: 42%;
+  right: 22rem;
+
+  @media only screen and (max-width:$big){
+    right: 1rem;
+    transform: scale(1.2);
+  }
+
+  @media only screen and (max-width:$middle){
+    right: 1rem;
+    transform: scale(.8);
+  }
+
+  @media only screen and (max-width:$phone){
+    top: 42%;
+    right: 1rem;
+    transform: scale(.8);
+  }
+}

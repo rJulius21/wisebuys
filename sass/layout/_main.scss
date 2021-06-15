@@ -1,0 +1,23 @@
+.main { 
+  position: relative;
+  margin-top: 9rem;
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (max-width:$big){
+    margin-top: 14.7rem;
+  }
+
+  @media only screen and (max-width:$middle){
+    margin-top: 14.3rem;
+  }
+
+  @media only screen and (max-width:$phone){
+    margin-top: 16rem;
+  }
+
+  &--flex-c {
+    flex-direction: column;
+  }
+
+}

@@ -1,0 +1,118 @@
+.home-pitch{ overflow: hidden;
+  position: relative;
+  display: flex;
+  color: $text-color-light;
+  justify-content: center;
+  background-image: $rwb-gradient;
+
+  &__heading {
+    margin-bottom: 1rem;
+    font-size: 3.8rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+
+    @media only screen and(max-width:$phone){
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
+  }
+  
+  &__text-box { 
+    position: relative;
+    z-index: 5;
+    width: 50%;
+    padding-top:25rem;
+    padding-bottom:15rem;
+    
+    text-align: center;
+    text-shadow: $text-shadow;
+    
+    @media only screen and(max-width:$big){
+      width: 65%;
+    }
+    
+    @media only screen and(max-width:$middle){
+      padding-top:20rem;
+      padding-bottom:12rem;
+      width: 85%;
+    }
+    
+    @media only screen and(max-width:$phone){
+      width: 100%;
+      text-shadow: none;
+      font-weight: 400;
+      color: $text-color-dark;
+      text-shadow: none;
+    }
+  }
+
+  &__text {
+    font-size: 2.4rem;
+    
+    @media only screen and(max-width:$phone){
+      width: 100%;
+      font-size: 2.2rem;
+    }
+  }
+
+  &__logo-box {
+    position: absolute;
+    width:100%;
+    top: 12%;
+    left: 0;
+
+    @media only screen and(max-width:$phone){
+      top:5%;
+    }
+  }
+  
+  &__logo{
+    margin: 0 auto;
+    transform: scale(1.0);
+    opacity:.45;
+    transition: $transition-1;
+    
+    &:hover{
+      opacity: .75;
+      transform: scale(1.1) ;
+    }
+  }
+
+  &__composition {
+     position: absolute;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     left: 50%;
+     opacity: .15;
+     
+     @media only screen and (max-width:$phone){
+       width: 90%;
+     }
+  }
+
+  &__composition-img1 {
+    width: 100%;
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    opacity: .5;
+    overflow: hidden;
+    filter:grayscale(50%);
+
+    @media only screen and(max-width:$phone){
+      display: none;
+    }
+  }
+
+  &__video-content{
+    height: 100%;
+        width: 100%;
+        object-fit: cover;
+  }
+}

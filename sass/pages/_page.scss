@@ -1,0 +1,39 @@
+.page {  
+
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: 9rem;
+
+  @media only screen and (max-width:$big){
+    margin-top: 14.7rem;
+  }
+
+  @media only screen and (max-width:$middle){
+    margin-top: 14.3rem;
+  }
+  
+  @media only screen and (max-width:$phone){
+    margin-top: 16rem;
+  }
+  
+  &__main-grid { 
+    margin: 2rem 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr );
+    grid-gap:2rem;
+    justify-items: center;
+
+    @media only screen and (max-width:$middle){
+      grid-template-columns: repeat(3, 1fr );
+      grid-gap: 1rem;
+    }
+
+    @media only screen and (max-width:$phone){
+      grid-template-columns: repeat(2, 1fr );
+      
+    }
+
+    }
+}

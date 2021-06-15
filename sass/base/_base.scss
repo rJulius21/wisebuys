@@ -1,0 +1,47 @@
+
+$big: 87.5em;     // 1400px
+$middle: 62.5em;     // 1000px
+$full-desktop: 120em; // 1920px
+$phone: 31.25em; // 500px
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 1rem == 10px
+
+  @media only screen and (max-width: $phone) {
+    font-size: 50%; // 1rem == 8px
+  }
+}
+
+body {
+  background-image: url("/img/splash/splashtall1-full.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  @media only screen and (max-width: $phone) {
+    background-image: url("/img/splash/splashtall1.jpg");
+  }
+} 
+
+.body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  max-width: 192rem;
+
+  background-color: rgba(255, 255, 255, 0.6);
+  
+}
+
+img {
+  display: block;
+}

@@ -1,0 +1,47 @@
+.single-image-display {
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  
+  
+  display: flex;
+  flex-direction: column;
+  
+  @media only screen and (max-width:$middle){
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  &__featured {
+    width: 100%;
+    border: 1px solid $darken-2;
+  }
+  
+  &__slider {
+    display: flex;
+    margin-top: 1rem;
+
+    @media only screen and (max-width:$phone){
+      justify-content: space-between;
+    }
+  }
+  
+  &__thumb { 
+    width: 100px; 
+    border: 1px solid $darken-2;
+
+    @media only screen and (max-width:$phone){
+      width: 32%;
+    }
+  
+    &:not(:last-child) {
+      margin-right: 5px;
+
+      @media only screen and (max-width:$phone){
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+

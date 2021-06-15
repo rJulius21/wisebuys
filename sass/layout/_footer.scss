@@ -1,0 +1,80 @@
+.footer { margin-top: 9rem; // REMOVE THIS MARGIN ON PRODUCTION SITE
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0rem;
+  background-color: $brighten-1;
+
+  &__links { 
+    display: flex;
+    flex: 1;
+    margin: 0 1rem;
+    padding: 0rem;
+    transition: $transition-1;
+
+    @media only screen and (max-width: $phone) {
+      flex-direction: column;
+    }
+    
+    &--left { 
+      justify-content: flex-end;
+      text-align: right;
+      transition: $transition-1;
+
+      @media only screen and (max-width: $phone) {
+        text-align: center;
+      }
+    }
+
+    &--right{ 
+      justify-content: flex-start;
+      transition: $transition-1;
+
+      @media only screen and (max-width: $phone) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__link {
+    margin-bottom: 8px;
+    padding: .2rem 1rem;
+    font-size: 1.4rem;
+    color: $link-color-dark;
+    
+    &:hover, &:active {
+      color: $link-color-light;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  &__logo-box { background-color: $color-prim-dark;
+    height: 1rem;
+    width: 1rem;
+
+    &:not(:last-child){
+      margin-right: 2rem;
+    }
+  }
+
+  &__logo {
+
+  }
+
+  &__copy-box {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__copy {
+    padding: 2rem;
+    font-size: 1.3rem;
+  }
+
+}
