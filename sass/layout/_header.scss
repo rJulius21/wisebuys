@@ -30,7 +30,7 @@
 #header__nav-close {
   display: none;
 
-  @media only screen and(max-width:$phone){
+  @media only screen and(max-width:$middle){
     position: absolute;
     right: -22%;
     top: 0;
@@ -170,11 +170,11 @@
   
   ///// HEADER BUTTONS
   &__nav-link { 
-    background-color: $color-prim-light;
-    color: $text-color-dark;
+    color: $color-prim-dark;
     padding: 4px 1rem;
     transition: $transition-1;
     width: 14rem;
+    border: 3px solid $color-prim-dark;
     border-radius: $bor-rad-sm;
     font-size: 2rem;
     font-weight: 400;
@@ -186,6 +186,7 @@
     
     &:hover, &:active {
       background-color: $color-prim-dark;
+      color: $text-color-light;
       cursor: pointer;
     }
   }

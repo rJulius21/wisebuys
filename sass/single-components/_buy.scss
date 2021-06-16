@@ -4,7 +4,7 @@
   
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 50% repeat(3, max-content);
+  grid-template-rows: auto repeat(3, max-content);
 
   @media only screen and (max-width:$middle){
     grid-column: 1 / -1;
@@ -14,12 +14,13 @@
   }
 
   &__name { 
+    justify-self: stretch;
     grid-row: 1 / 2;
     grid-column: 1 / -1;
 
     padding-bottom: 1rem;
     line-height: 1.6;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
   }
 
   &__distributor { 
@@ -27,7 +28,7 @@
     grid-row: 2 / 3;
 
     width: max-content;
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   
   &__link { 
@@ -40,9 +41,10 @@
     padding: 1rem;
     font-size: 2.6rem;
     background-color: $color-prim-light;
-    color: $link-color-dark;
+    color: $text-color-light;
     border-radius: 10rem;
     box-shadow: $shadow-sm;
+    border:1px solid $darken-1;
 
     transition: $transition-1;
 
@@ -81,20 +83,34 @@
     position: relative;
     text-align: center;
   }
+  &__disclaimer-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 1rem;
+    background-color: $darken-2;
+    color:$text-color-light;
+    transform: translateY(6rem);
+    display: none;
+    font-size: 1.4rem;
+    border-radius: $bor-rad-sm;
+
+    &:hover ~ .single-buy__disclaimer-link{
+      display: block;
+    }
+  }
 
   &__disclaimer-link {
     padding-top: 5px;
     color: $color-prim-dark;
     font-size: 1.4rem;
     text-decoration: underline;
+
+    &:hover {
+      color: rgb(39, 197, 39);
+    }
   }
 
-  &__disclaimer-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    font-size: 1.2rem;
-  }
 }
   

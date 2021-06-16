@@ -11,9 +11,9 @@ let counter = 1;
 const sliderImgSize = carouselImages[counter].clientWidth;
 
 // LOAD IMAGE WIDTH AFTER IMAGE IS FULLY RENDERED
-imagesLoaded(document.body, function () {
-  return sliderImgSize;
-})
+// imagesLoaded(document.body, function () {
+//   return sliderImgSize;
+// })
 
 // TEST - IF IMAGE WIDTH IS LOADING CORRECTLY
 // console.log(sliderImgSize);
@@ -37,7 +37,7 @@ prevBtn.addEventListener('click', () => {
 
 // REMOVES TRANSITION TO LOOP IMAGES SMOOTHLY USING CLONES ON START AND END
 carouselSlide.addEventListener('transitionend', () => {
-  console.log(carouselImages[counter].id);
+
   if (carouselImages[counter].id === 'lastClone') {
     carouselSlide.style.transition = "none";
     counter = carouselImages.length - 2;

@@ -7,6 +7,7 @@
   border-radius: $bor-rad-sm;
   box-sizing: border-box;
   max-width: 30rem;
+  border:1px solid $darken-1;
 
   @media only screen and (max-width:$middle){
     max-width: 25rem;
@@ -85,9 +86,10 @@
     padding: 5px;
     background-color: $color-prim-light;
     font-size: 2rem;text-align: center;
-    color: $link-color-dark;
+    color: $text-color-light;
     border-radius: 10rem;
     box-shadow: $shadow-sm;
+    border:1px solid $darken-1;
 
     transition: $transition-1;
 

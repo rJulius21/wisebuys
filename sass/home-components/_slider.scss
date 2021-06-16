@@ -138,6 +138,10 @@
       height: 195px;
     }
   }
+
+  &__card-heading-link{
+    width: 100%;
+  }
   
   &__card-heading {
     background-color:$brighten-1;
@@ -176,20 +180,15 @@
     font-size: 3rem;
     border-radius: $bor-rad-sm;
     transition: $transition-1;
-    color: $link-color-dark;
+    color: $color-prim-dark;
 
     @media only screen and (max-width:$phone){
       padding: 1rem;
     }
 
-    &:hover {
+    &:hover, &:active {
       background-color: $color-prim-dark;
       color: $text-color-light;
-    }
-
-    &:active {
-      background-color: $color-prim-light;
-      color: $link-color-dark;
     }
   }
   

@@ -21,13 +21,13 @@ html {
 }
 
 body {
-  background-image: url("/img/splash/splashtall1-full.jpg");
+  background-image: url("img/splash/splashtall1-full.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 
   @media only screen and (max-width: $phone) {
-    background-image: url("/img/splash/splashtall1.jpg");
+    background-image: url("img/splash/splashtall.jpg");
   }
 } 
 
@@ -38,7 +38,7 @@ body {
   margin: 0;
   max-width: 192rem;
 
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.1);
   
 }
 

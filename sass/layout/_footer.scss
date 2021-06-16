@@ -1,9 +1,9 @@
-.footer { margin-top: 9rem; // REMOVE THIS MARGIN ON PRODUCTION SITE
+.footer {
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 3rem 0rem;
-  background-color: $brighten-1;
+  background-color: $brighten-2;
 
   &__links { 
     display: flex;
@@ -39,7 +39,7 @@
   &__link {
     margin-bottom: 8px;
     padding: .2rem 1rem;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: $link-color-dark;
     
     &:hover, &:active {

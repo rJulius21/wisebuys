@@ -1,3 +1,9 @@
+function greet() {
+  console.log('Greetings from wiseBuysUSA, have a great day!');
+  console.log(' ');
+  console.log('Need your own website? visit juliusmedia.org ');
+}
+
 function toggleMobileMenu() {
   // UI VARIABLES
   const nav = document.getElementById('header__nav-box');
@@ -108,3 +114,5 @@ function operateSubMenu() {
 toggleMobileMenu();
 dropMenu();
 operateSubMenu()
+
+greet();

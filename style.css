@@ -17,13 +17,13 @@ html {
       font-size: 50%; } }
 
 body {
-  background-image: url("/img/splash/splashtall1-full.jpg");
+  background-image: url("img/splash/splashtall1-full.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed; }
   @media only screen and (max-width: 31.25em) {
     body {
-      background-image: url("/img/splash/splashtall1.jpg"); } }
+      background-image: url("img/splash/splashtall.jpg"); } }
 
 .body {
   position: relative;
@@ -31,7 +31,7 @@ body {
   flex-direction: column;
   margin: 0;
   max-width: 192rem;
-  background-color: rgba(255, 255, 255, 0.6); }
+  background-color: rgba(255, 255, 255, 0.1); }
 
 img {
   display: block; }
@@ -121,7 +121,7 @@ a {
     justify-content: center;
     width: 100%;
     padding: 5px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.75);
     border-radius: 2px;
     cursor: pointer; }
     .card-lg__img-box:hover {
@@ -368,6 +368,8 @@ a {
         flex: inherit;
         width: 280px;
         height: 195px; } }
+  .slider__card-heading-link {
+    width: 100%; }
   .slider__card-heading {
     background-color: rgba(255, 255, 255, 0.25);
     margin: 0;
@@ -395,16 +397,13 @@ a {
     font-size: 3rem;
     border-radius: 2px;
     transition: all 0.3s;
-    color: #272942; }
+    color: #4a93ff; }
     @media only screen and (max-width: 31.25em) {
       .slider__link {
         padding: 1rem; } }
-    .slider__link:hover {
+    .slider__link:hover, .slider__link:active {
       background-color: #4a93ff;
       color: #dadcf2; }
-    .slider__link:active {
-      background-color: #8cb3fc;
-      color: #272942; }
 
 #home-slider__arrow--left {
   top: 42%;
@@ -440,12 +439,11 @@ a {
       transform: scale(0.8); } }
 
 .footer {
-  margin-top: 9rem;
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 3rem 0rem;
-  background-color: rgba(255, 255, 255, 0.25); }
+  background-color: rgba(255, 255, 255, 0.75); }
   .footer__links {
     display: flex;
     flex: 1;
@@ -471,7 +469,7 @@ a {
   .footer__link {
     margin-bottom: 8px;
     padding: .2rem 1rem;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: #272942; }
     .footer__link:hover, .footer__link:active {
       color: #a8b0f7; }
@@ -508,7 +506,7 @@ a {
       width: 8rem;
       box-shadow: 0 0 2.5rem 0px rgba(0, 0, 0, 0.4);
       border-radius: 2px;
-      border: 1px solid rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.75);
       cursor: pointer; } }
   @media only screen and (max-width: 31.25em) {
     #header__nav-open {
@@ -519,7 +517,7 @@ a {
 
 #header__nav-close {
   display: none; }
-  @media only screen and (max-width: 31.25em) {
+  @media only screen and (max-width: 62.5em) {
     #header__nav-close {
       position: absolute;
       right: -22%;
@@ -624,11 +622,11 @@ a {
           margin-bottom: 1rem;
           width: 100%; } }
   .header__nav-link {
-    background-color: #8cb3fc;
-    color: #37394b;
+    color: #4a93ff;
     padding: 4px 1rem;
     transition: all 0.3s;
     width: 14rem;
+    border: 3px solid #4a93ff;
     border-radius: 2px;
     font-size: 2rem;
     font-weight: 400; }
@@ -638,6 +636,7 @@ a {
         border: 2px solid #4a93ff; } }
     .header__nav-link:hover, .header__nav-link:active {
       background-color: #4a93ff;
+      color: #dadcf2;
       cursor: pointer; }
   .header__nav-open-text {
     display: flex;
@@ -806,7 +805,7 @@ a {
   overflow-x: auto;
   min-height: 100%;
   width: 30rem;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.75);
   color: #37394b; }
   @media only screen and (max-width: 31.25em) {
     .sidebar {
@@ -859,7 +858,7 @@ a {
 .page-breadcrumb {
   grid-column: 1 / -1;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 100px;
   display: flex;
   flex-direction: column; }
@@ -924,13 +923,14 @@ a {
 
 .page-card {
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.75);
   display: flex;
   flex-direction: column;
   padding: 2rem;
   border-radius: 2px;
   box-sizing: border-box;
-  max-width: 30rem; }
+  max-width: 30rem;
+  border: 1px solid rgba(0, 0, 0, 0.1); }
   @media only screen and (max-width: 62.5em) {
     .page-card {
       max-width: 25rem;
@@ -983,9 +983,10 @@ a {
     background-color: #8cb3fc;
     font-size: 2rem;
     text-align: center;
-    color: #272942;
+    color: #dadcf2;
     border-radius: 10rem;
     box-shadow: 0 0 1.5rem 0px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: all 0.3s; }
     .page-card__buy-link:hover {
       transform: scale(1.04);
@@ -1034,11 +1035,11 @@ a {
     transition: all 0.3s; }
     @media only screen and (max-width: 62.5em) {
       .page-slider__arrow {
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0.75);
         height: 5rem;
         width: 5rem; } }
     .page-slider__arrow:hover {
-      background-color: rgba(255, 255, 255, 0.9); }
+      background-color: rgba(255, 255, 255, 0.75); }
     .page-slider__arrow--left {
       top: 45%;
       left: 10%;
@@ -1115,7 +1116,7 @@ a {
       padding: 1rem;
       box-sizing: border-box; } }
   .single__card > * {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.75);
     padding: 2rem;
     box-shadow: 0 0 2.5rem 0px rgba(0, 0, 0, 0.4);
     border-radius: 2px; }
@@ -1129,23 +1130,24 @@ a {
   grid-row: 1 / 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 50% repeat(3, max-content); }
+  grid-template-rows: auto repeat(3, max-content); }
   @media only screen and (max-width: 62.5em) {
     .single-buy {
       grid-column: 1 / -1;
       grid-row: 1 / 2;
       grid-template-rows: repeat(4, max-content); } }
   .single-buy__name {
+    justify-self: stretch;
     grid-row: 1 / 2;
     grid-column: 1 / -1;
     padding-bottom: 1rem;
     line-height: 1.6;
-    font-size: 2.4rem; }
+    font-size: 2.6rem; }
   .single-buy__distributor {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     width: max-content;
-    font-size: 2.2rem; }
+    font-size: 2rem; }
   .single-buy__link {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
@@ -1155,9 +1157,10 @@ a {
     padding: 1rem;
     font-size: 2.6rem;
     background-color: #8cb3fc;
-    color: #272942;
+    color: #dadcf2;
     border-radius: 10rem;
     box-shadow: 0 0 1.5rem 0px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: all 0.3s; }
     .single-buy__link:hover {
       transform: scale(1.08);
@@ -1180,17 +1183,26 @@ a {
     grid-column: 2 / 3;
     position: relative;
     text-align: center; }
+  .single-buy__disclaimer-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #dadcf2;
+    transform: translateY(6rem);
+    display: none;
+    font-size: 1.4rem;
+    border-radius: 2px; }
+    .single-buy__disclaimer-text:hover ~ .single-buy__disclaimer-link {
+      display: block; }
   .single-buy__disclaimer-link {
     padding-top: 5px;
     color: #4a93ff;
     font-size: 1.4rem;
     text-decoration: underline; }
-  .single-buy__disclaimer-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    font-size: 1.2rem; }
+    .single-buy__disclaimer-link:hover {
+      color: #27c527; }
 
 .single-image-display {
   grid-column: 1 / 2;
@@ -1288,7 +1300,7 @@ a {
 .single-reviews {
   overflow-y: auto;
   border-radius: 2px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.75);
   width: 50rem; }
   @media only screen and (max-width: 87.5em) {
     .single-reviews {
