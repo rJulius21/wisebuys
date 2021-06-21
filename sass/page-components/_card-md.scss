@@ -8,6 +8,7 @@
   box-sizing: border-box;
   max-width: 30rem;
   border:1px solid $darken-1;
+  box-shadow: $shadow-sm;
 
   @media only screen and (max-width:$middle){
     max-width: 25rem;

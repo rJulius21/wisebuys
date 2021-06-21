@@ -8,7 +8,7 @@ function recommendedSlider() {
   const recomCards = document.querySelectorAll('#page-slide-recom > .page-card')
 
   // METRICS VARIABLES
-  let recomGap = 20;
+  let recomGap = 22;
   let counter = 0;
   const cardWidth = recomCards[counter].clientWidth;
 

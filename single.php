@@ -100,7 +100,7 @@
 </div>
 <!-- END MAIN -->
 
-<?php include 'recent.php'; ?>
-<?php include 'recommended.php'; ?>
+<?php include 'partials/recent.php'; ?>
+<?php include 'partials/recommended.php'; ?>
 
 <?php get_footer(); ?>

@@ -6,7 +6,7 @@ function recentSlider() {
   const recentCards = document.querySelectorAll('#page-slide-recent > .page-card')
 
   // METRICS VARIABLES
-  let recentGap = 20;
+  let recentGap = 22;
   let counter = 0;
   const cardWidth = recentCards[counter].clientWidth;
 

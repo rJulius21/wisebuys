@@ -2,11 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Document</title>
-  
-
 <?php wp_head(); ?>
-
 </head>
 
 <body>
@@ -20,7 +16,7 @@
         </div>
 
         <div class="header__heading-box">
-          <h1 class="header__heading">wiseBuysUSA.com</h1>
+          <a href="<?php echo site_url(); ?>" class="header__heading-link"><h1 class="header__heading">wiseBuysUSA.com</h1></a>
         </div>
 
         <!-- START HEADER NAV -->
@@ -33,6 +29,13 @@
           <div id="header__nav-close">
             <!-- <p class="header__nav-close-text">CLOSE</p> -->
           </div>
+
+  <?php
+  // This code tells wordpress to register a menu location here that is managed in the wordpress dashboard
+  wp_nav_menu(array(
+    'theme_location' => 'headerMenu'
+  ));
+  ?>
 
           <ul class="header__nav-list">
 

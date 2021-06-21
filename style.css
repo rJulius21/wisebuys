@@ -21,9 +21,9 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; }
-  @media only screen and (max-width: 31.25em) {
+  @media only screen and (max-width: 62.5em) {
     body {
-      background-image: url("img/splash/splashtall.jpg"); } }
+      background-image: url("img/splash/splashtall2.jpg"); } }
 
 .body {
   position: relative;
@@ -561,7 +561,8 @@ a {
   .header__heading-box {
     display: flex;
     align-items: flex-end;
-    margin-left: 2rem; }
+    margin-left: 2rem;
+    text-align: center; }
     @media only screen and (max-width: 62.5em) {
       .header__heading-box {
         width: 100%; } }
@@ -584,6 +585,8 @@ a {
       .header__heading {
         padding: 1rem 0rem;
         font-size: 4rem; } }
+  .header__heading-link {
+    width: 100%; }
   .header__nav-box {
     display: flex;
     align-items: flex-end;
@@ -930,7 +933,8 @@ a {
   border-radius: 2px;
   box-sizing: border-box;
   max-width: 30rem;
-  border: 1px solid rgba(0, 0, 0, 0.1); }
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1.5rem 0px rgba(0, 0, 0, 0.4); }
   @media only screen and (max-width: 62.5em) {
     .page-card {
       max-width: 25rem;
@@ -994,6 +998,14 @@ a {
       filter: brightness(110%); }
     .page-card__buy-link:active {
       box-shadow: 0 0 1.5rem 0px rgba(0, 0, 0, 0.4); }
+
+.page-content {
+  background-color: #ccc;
+  font-size: 1.6rem;
+  padding: 2rem; }
+  .page-content__heading {
+    font-size: 2.8rem;
+    color: white; }
 
 .page-slider {
   position: relative;

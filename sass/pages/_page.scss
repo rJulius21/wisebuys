@@ -1,5 +1,4 @@
-.page {  
-
+.page { 
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -17,7 +16,7 @@
     margin-top: 16rem;
   }
   
-  &__main-grid { 
+  &__main-grid {
     margin: 2rem 0;
     box-sizing: border-box;
     display: grid;

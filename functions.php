@@ -11,6 +11,15 @@
   }
 
   add_action('wp_enqueue_scripts','wisebuys_files'); 
+
+  function wisebuys_features() {
+    register_nav_menu('headerMenu', 'Header Menu');
+    register_nav_menu('footerMenu', 'Footer Menu');
+
+    add_theme_support('title-tag');
+  }
+  
+  add_action('after_setup_theme', 'wisebuys_features');
   
 ?>
 
