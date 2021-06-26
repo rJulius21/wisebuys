@@ -5,8 +5,6 @@
 <!-- START PAGE -->
 <div class="page">
 
-<h1 style="display:block; background-color:red;">ARCHIVE OR BLOG TITLE BANNER</h1>
-
   <?php include 'partials/breadcrumb.php'; ?>
 
   <!-- START MAIN GRID -->
@@ -45,6 +43,7 @@
             </div>
           </div>
           <p class="page-card__price">$<?php echo'the price'; ?></p>
+          <p>Posted by <?php the_author_posts_link(); ?> on <?php the_time('n.j.y'); ?> in <?php echo get_the_category_list(', '); ?></p>
           <a href="<?php the_permalink(); ?>" class="page-card__buy-link">Buy it now!</a>
 
         </div>

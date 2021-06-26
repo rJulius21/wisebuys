@@ -20,6 +20,30 @@
   }
   
   add_action('after_setup_theme', 'wisebuys_features');
+
+  
+  //////////////////////////////////////////////////
+  //////////////////////////////////////////////////
+  // THE FUNCTION BELOW EXISTS IN 'mu-plugins/wp-content/mu-plugins/site-post-types.php'
+
+  // function site_post_types(){
+  //   register_post_type('product', array(
+  //     'public' => true,
+  //     'show_in_rest' => true,
+
+  //     'labels' => array(
+  //       'name' => 'Products',
+  //       'add_new_item' => 'Add New Product',
+  //       'edit_item' => 'Edit Product',
+  //       'all_items' => 'All Products',
+  //       'singular_name' => 'Product' 
+  //     ),
+  
+  //     'menu_icon' => 'dashicons-lightbulb'
+  //   ));  
+  // }
+  // add_action('init', 'site_post_types');
   
 ?>
+
 

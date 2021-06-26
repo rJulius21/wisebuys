@@ -45,3 +45,8 @@ p {
 a {
   color: $link-color-dark;
 }
+
+::selection{
+  background-color: rgba(255, 179, 66, 0.35);
+  color:$text-color-light;
+}

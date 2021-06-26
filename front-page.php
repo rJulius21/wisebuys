@@ -7,8 +7,6 @@
 
 <?php include 'partials/featured-slider.php'; ?>
 
-
-
 <!-- START HOME CONTENT-->
 <div class="home">
 

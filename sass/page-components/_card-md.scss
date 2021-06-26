@@ -28,10 +28,10 @@
     font-weight: 300;
 
     @media only screen and (max-width:$middle){
-      margin: -1rem;
+      margin: -.5rem;
     }
 
-    @media only screen and (max-width:$middle){
+    @media only screen and (max-width:$phone){
       margin: -1.5rem;
     }
   }

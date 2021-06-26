@@ -43,7 +43,7 @@
           <div class="footer__logo-box"><img src="" alt="" class="footer__logo"></div>
         </div>
         <div class="footer__copy-box">
-          <p class="footer__copy">shopSmart &copy; 2021</p>
+          <a href="<?php site_url(); ?>"><p class="footer__copy">wiseBuysUSA.com &copy; 2021</p></a>
         </div>
 
       </div>

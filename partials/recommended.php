@@ -20,46 +20,51 @@
     <div id="page-slide-recom" class="page-slider__cards-box">
 
     <?php
-      while(have_posts()){
-        the_post();
-        ?>
+          $recommendedPosts = new WP_Query(array(
+            'posts_per_page' => 10,
+            'category_name' => 'Accessories'
+          ));
 
-        <!-- START CARD -->
-        <div class="page-card">
+          while($recommendedPosts->have_posts()) {
+            $recommendedPosts->the_post(); ?>
 
-          <a href="<?php the_permalink(); ?>"><h2 class="page-card__heading"><?php the_title(); ?></h2></a>
-          <div class="page-card__img-box">
-            <img src="<?php echo get_theme_file_uri('img/shopsmart-logo-md.png') ?>" alt="placeholder" class="page-card__img">
-          </div>
-          <div class="page-card__rating">
-            <h3 class="page-card__number"><?php echo'5.0'; ?></h3>
-            <div class="page-card__icon-box">
-            <svg class="page-card__icon">
-                <use xlink:href="<?php echo get_theme_file_uri('/icons/symbol-defs.svg#icon-star') ?> "></use>
-              </svg>
-              <svg class="page-card__icon">
-                <use xlink:href="<?php echo get_theme_file_uri('/icons/symbol-defs.svg#icon-star') ?>"></use>
-              </svg>
-              <svg class="page-card__icon">
-                <use xlink:href="<?php echo get_theme_file_uri('/icons/symbol-defs.svg#icon-star') ?>"></use>
-              </svg>
-              <svg class="page-card__icon">
-                <use xlink:href="<?php echo get_theme_file_uri('/icons/symbol-defs.svg#icon-star') ?>"></use>
-              </svg>
-              <svg class="page-card__icon">
-                <use xlink:href="<?php echo get_theme_file_uri('/icons/symbol-defs.svg#icon-star') ?>"></use>
-              </svg>
+
+            <!-- START CARD -->
+            <div class="page-card">
+
+              <a href="<?php the_permalink(); ?>"><h2 class="page-card__heading"><?php the_title(); ?></h2></a>
+              <div class="page-card__img-box">
+                <img src="<?php echo get_theme_file_uri('img/shopsmart-logo-md.png') ?>" alt="placeholder" class="page-card__img">
+              </div>
+              <div class="page-card__rating">
+                <h3 class="page-card__number"><?php echo'5.0'; ?></h3>
+                <div class="page-card__icon-box">
+                <svg class="page-card__icon">
+                    <use xlink:href="<?php echo get_theme_file_uri('/icons/symbol-defs.svg#icon-star') ?> "></use>
+                  </svg>
+                  <svg class="page-card__icon">
+                    <use xlink:href="<?php echo get_theme_file_uri('/icons/symbol-defs.svg#icon-star') ?>"></use>
+                  </svg>
+                  <svg class="page-card__icon">
+                    <use xlink:href="<?php echo get_theme_file_uri('/icons/symbol-defs.svg#icon-star') ?>"></use>
+                  </svg>
+                  <svg class="page-card__icon">
+                    <use xlink:href="<?php echo get_theme_file_uri('/icons/symbol-defs.svg#icon-star') ?>"></use>
+                  </svg>
+                  <svg class="page-card__icon">
+                    <use xlink:href="<?php echo get_theme_file_uri('/icons/symbol-defs.svg#icon-star') ?>"></use>
+                  </svg>
+                </div>
+              </div>
+              <p class="page-card__price">$<?php echo'the price'; ?></p>
+              <a href="<?php the_permalink(); ?>" class="page-card__buy-link">Buy it now!</a>
+
             </div>
-          </div>
-          <p class="page-card__price">$<?php echo'the price'; ?></p>
-          <a href="<?php the_permalink(); ?>" class="page-card__buy-link">Buy it now!</a>
+            <!-- END CARD -->
 
-        </div>
-        <!-- END CARD -->
-
-      <?php
-      }
-      ?>
+        <?php
+            } wp_reset_postdata();
+        ?>
 
     </div>
     <!-- END CARDS BOX -->

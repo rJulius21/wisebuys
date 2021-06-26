@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 
 <head>
-<?php wp_head(); ?>
+  <meta charset="<?php bloginfo('charset'); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <?php wp_head(); ?>
 </head>
 
 <body>
   <div class="body">
 
     <!-- START HEADER -->
-    <header>
-      <div class="header">
-        <div class="header__logo-box">
+    <header class="header">
+    
+    <div class="header__logo-box">
           <img src="<?php echo get_theme_file_uri('img/shopsmart-logo-sm.png')?>" alt="" class="header__logo">
         </div>
 
@@ -23,19 +25,18 @@
         <div id="header__nav-open">
           <p class="header__nav-open-text">MENU</p>
         </div>
-        <div class="header__nav-box" id="header__nav-box">
+
+         <div class="header__nav-box" id="header__nav-box">
 
 
-          <div id="header__nav-close">
-            <!-- <p class="header__nav-close-text">CLOSE</p> -->
-          </div>
+          <div id="header__nav-close"></div>
 
-  <?php
-  // This code tells wordpress to register a menu location here that is managed in the wordpress dashboard
-  wp_nav_menu(array(
-    'theme_location' => 'headerMenu'
-  ));
-  ?>
+            <?php
+            //This code tells wordpress to register a menu location here that is managed in the wordpress dashboard
+            // wp_nav_menu(array(
+            //   'theme_location' => 'headerMenu'
+            // ));
+            ?>
 
           <ul class="header__nav-list">
 
@@ -156,6 +157,6 @@
         </div>
         <!-- END SEARCH -->
 
-      </div>
+      
     </header>
     <!-- END HEADER -->

@@ -44,6 +44,7 @@
             </div>
           </div>
           <p class="page-card__price">$<?php echo'the price'; ?></p>
+          <p>Posted by <?php the_author_posts_link(); ?> in <?php echo get_the_category_list(', '); ?></p>
           <a href="<?php echo'#'; ?>" class="page-card__buy-link">Buy it now!</a>
 
         </div>

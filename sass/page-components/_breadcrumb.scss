@@ -2,11 +2,12 @@
   grid-column: 1 / -1;
   overflow: hidden;
   
-  background-color: $brighten-2;
-  border-radius: 100px;
-  
   display: flex;
   flex-direction: column;
+  
+  background-color: $brighten-2;
+  border-radius: 100px;
+  box-shadow: $shadow-sm;
 
   &__viewport { 
     overflow: scroll;

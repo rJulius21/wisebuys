@@ -12,11 +12,7 @@
 
     <img src="<?php echo get_theme_file_uri('/img/nitecore-light.jpg'); ?>" alt="placeholder" class="single-image-display__featured">
 
-    <div class="single-image-display__slider">
-      <img src="<?php echo get_theme_file_uri('/img/dummy/1.png'); ?>" alt="placeholder" class="single-image-display__thumb">
-      <img src="<?php echo get_theme_file_uri('/img/dummy/2.png'); ?>" alt="placeholder" class="single-image-display__thumb">
-      <img src="<?php echo get_theme_file_uri('/img/dummy/3.png'); ?>" alt="placeholder" class="single-image-display__thumb">
-    </div>
+    
 
   </div>
   <!-- END IMAGE DISPLAY -->

@@ -4,6 +4,16 @@
 <div class="page-breadcrumb">
 
 <div class="page-breadcrumb__viewport">
+<h2 class="archive-banner">
+  <?php 
+    if(is_category()) {
+      echo "You're browsing in ";
+      single_cat_title();
+    } else{
+      echo "You're browsing all products made in the USA";
+    }
+  ?>
+</h2>
   <ul class="page-breadcrumb__list">
     <li class="page-breadcrumb__item">
       <p class="page-breadcrumb__item-text">first</p> <span> &gt;</span>
@@ -35,3 +45,4 @@
 </div>
 </div>
 <!-- END TOP BREADCRUMB -->
+
