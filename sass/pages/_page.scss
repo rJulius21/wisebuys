@@ -1,6 +1,7 @@
 .page { 
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 1rem;
   margin-top: 9rem;
 
@@ -16,13 +17,16 @@
     margin-top: 16rem;
   }
   
-  &__main-grid {
+  &__main-grid { 
     margin: 2rem 0;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(4, 1fr );
-    grid-gap:2rem;
-    justify-items: center;
+    grid-gap:4rem;
+
+    @media only screen and (max-width:$big){
+      grid-gap: 2rem;
+    }
 
     @media only screen and (max-width:$middle){
       grid-template-columns: repeat(3, 1fr );

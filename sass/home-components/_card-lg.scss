@@ -1,7 +1,7 @@
 .card-lg { 
   overflow: hidden;
   width: 72rem;
-  height: 52rem;
+  //min-height: 52rem;
   border-radius: $bor-rad-lg;
   background-color: $darken-1;
   box-shadow: $shadow;
@@ -29,9 +29,14 @@
     border: 1px solid $darken-1;
     text-shadow: $text-shadow;
   }
+
+  &__heading-link{
+    width: 100%;
+    text-align: center;
+  }
   
   &__see-all {
-    display: none;
+    //display: none;
   }
   
   &__content {

@@ -1,13 +1,22 @@
 .page-breadcrumb {  
-  grid-column: 1 / -1;
+  align-self: stretch;
   overflow: hidden;
   
   display: flex;
   flex-direction: column;
   
+  margin: 0 8rem;
   background-color: $brighten-2;
   border-radius: 100px;
   box-shadow: $shadow-sm;
+
+  @media only screen and(max-width:$middle){
+    margin: 0 2rem;
+  }
+
+  @media only screen and(max-width:$phone){
+    margin: 0 0;
+  }
 
   &__viewport { 
     overflow: scroll;

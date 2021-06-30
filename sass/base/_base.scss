@@ -2,7 +2,7 @@
 $big: 87.5em;     // 1400px
 $middle: 62.5em;     // 1000px
 $full-desktop: 120em; // 1920px
-$phone: 31.25em; // 500px
+$phone: 37.5em; // 500px
 
 *,
 *::after,
@@ -38,7 +38,7 @@ body {
   margin: 0 auto;
   max-width: 192rem;
 
-  background-color: rgba(255, 179, 66, 0.55);
+  background-color: $color-accent;
   
 }
 
